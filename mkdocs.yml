@@ -1,0 +1,6 @@
+site_name: My Docs
+plugins:
+  - macros:
+      module_name: main
+  - img2fig
+  - with-pdf
