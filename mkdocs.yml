@@ -1,6 +1,49 @@
 site_name: My Docs
+theme: 
+  name: material
+  palette:
+    scheme: Slate
 plugins:
   - macros:
       module_name: main
   - img2fig
-  - with-pdf
+  - with-pdf:
+      author: Cotture Corentin
+      copyright: CFPT 2022
+      #
+      #cover: false
+      #back_cover: true
+      cover_title: Diplôme de technicien ES
+      cover_subtitle: Cahier des charges
+      #cover_logo: img/logo.png
+      #custom_template_path: docs/main.css
+      #
+      toc_title: Table des matières
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      #render_js: true
+      #headless_chrome_path: headless-chromium
+      #
+      #output_path: any-place/document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
+#extra_css:
+#    - main.css

@@ -1,6 +1,6 @@
 # Food Creator 
 
-{{ image("1024.jpg", "tanos") }}
+{{ image("1024.jpg", "tanoss", "20") }}
 
 *FoodCreator&copy;* est un assistant robotique qui réalise des plats.
 
