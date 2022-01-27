@@ -1,7 +1,10 @@
 # Food Creator 
 
-{{ image("1024.jpg","500", "tanos") }}
 
+<!-- {{ image("1024.jpg", "tanos    jff j", "50") }} -->
+
+
+<!-- {{ image("NewTux.svg", "fsddfffjf    jff j", "65") }} -->
 *FoodCreator&copy;* est un assistant robotique qui réalise des plats.
 
 Il y a un certain nombre de recette possible par défaut : 
@@ -10,54 +13,189 @@ Il y a un certain nombre de recette possible par défaut :
 - Frites
 - Salade
 - Pizza
-- Sandwich
-
-## Structure physique
-
-L'appareil possède un écran tactile OLED pour le choix des différents plats a réaliser.
-Il possède également 5 points d'entrées pour les des éléments spécifique :
-
-- 1) L'eau (liquide) 
-- 2) Viande (poudre)
-- 3) Légumes (poudre)
-- 4) Fruits (poudre)
-- 5) Autre (poudre)
-
-Les points d'entrées sont representé par des socles vissable en dessous de la machine que l'utilisateur devras visser lorsqu'une recette le demande.
-
-L'assistant est sous forme d'un cube creux sur un axe et il possible 4 points d'entrée visable sur la surface en haut a l'intérieur de l'assistant.
-
-Lorsqu'un recette est lancé, l'assistant vas regarder si les socles nécessaires sont bien visser. A l'aide d'une pompe il vas aspirer la poudre avec une tige qui s'étend automatiquement.
-
-Les poudres sont utilisé a l'aide de multiples mini bras robotique avec des tuyaux a l'intérieur de la machine qui vas ensuite confectionner le plat.
-
-Les bras peuvent faire sortir des ingrédients par les tuyaux mais il est également possible de refroidir ou chauffer (cuir) à l'aide des bras. Les bras sont tous identiques.
-
-## Fonctionnement
-
-Chaque plat nécessite un certain nombre d'ingrédients en amont que l'utilisateur devras fournir.
-
-
-### Prérequis
-
-Les seuls poudres compatible recommandés sont les poudres officiels *FoodPowder&copy;*.
-
-## Exemple d'utilisation
-
-Si vous souhaitez réaliser le plat *Hamburger & Frites*, il faudrat vous fournir de l'eau ainsi que les poudres suivantes : Farine (réf: fe01), Boeuf (réf: bf54), LégumesB (réf: lb23), Fromage (réf: ff46) et Patate (réf: pe72).
-
-En premier vous allez devoir visser l'eau (1), le boeuf (2), les légumes (3) et le fromage (5) dans les socles préparé pour.
-
-Séléctionnez ensuite sur l'écran OLED le plat *Hamburger* puis sur 'Démarrer'.
-
-Une fois l'Hamburger fini, sortez l'eux de l'assistant.
-
-Ensuite dévissez toutes les poudres.
-
-Pour le deuxième plat, visser l'eau (1) et le fromage (5).
-
-Séléctionnez ensuite sur l'écran OLED le plat *Frites* puis sur 'Démarrer'.
+- Sandwich 
 
 ## Lexique
 
 Poudre : La poudre est le seul type d'ingrédient non-liquide que l'assistant peut prendre.
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+ 
+<!-- INCLUE
+<img
+    src="NewTux.svg"
+    alt="un triangle aux trois côtés égaux"
+    height="87px"
+    width="100px" />
+
+
+END -->
+
+
+## snippets
+``` python
+def coucou()
+    return 10
+
+```
+
+``` clojure
+
+(defn coucou [] 2)
+
+```
+
+``` csharp
+
+public int coucou() {
+    return 42;
+}
+
+```
+
+## keys 
+++ctrl+alt+delete++
+
+
+
+
+
+## inlinehilite
+Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.
+
+The mock shebang will be treated like text here: ` #!js var test = 0; `.
+
+
+
+
+
+## superfences
+``` {linenums="10"}
+"""Some file."""
+import foo.bar
+import boo.baz
+import foo.bar.baz
+```
+ 
+```{.py3 hl_lines="1-2 5 7-8" linenums="10"}
+import foo
+import boo.baz
+import foo.bar.baz
+
+class Foo:
+   def __init__(self):
+       self.foo = None
+       self.bar = None
+       self.baz = None
+```
+
+```{.py3 title="My Cool Header"}
+import foo.bar
+import boo.baz
+import foo.bar.baz
+```
+
+
+## caret
+H^2^0
+
+text^a\ superscript^
+  
+
+## tilde
+~~Delete me~~
+
+CH~3~CH~2~OH
+
+text~a\ subscript~
+
+
+
+## emoji 
+:smile: :heart: :thumbsup:
+
+
+## magiclink
+- Just paste links directly in the document like this: https://google.com.
+- Or even an email address: fake.email@email.com. 
+
+
+
+## mark
+
+==mark me==
+
+==smart==mark==
+
+
+
+## progress bar  
+`non fonctionnel`
+
+[=0% "0%"]
+[=5% "5%"]
+[=25% "25%"]
+[=45% "45%"]
+[=65% "65%"]
+[=85% "85%"]
+[=100% "100%"]
+
+[=85% "85%"]{: .candystripe}
+[=100% "100%"]{: .candystripe .candystripe-animate}
+
+[=0%]{: .thin}
+[=5%]{: .thin}
+[=25%]{: .thin}
+[=45%]{: .thin}
+[=65%]{: .thin}
+[=85%]{: .thin}
+[=100%]{: .thin}
+
+
+
+
+
+## task list
+`non fonctionnel sur le pdf`
+Task List
+
+- [X] item 1
+    * [X] item A
+    * [ ] item B
+        more text
+        + [x] item a
+        + [ ] item b
+        + [x] item c
+    * [X] item C
+- [ ] item 2
+- [ ] item 3
+
+[ ] item 2
+[X] item 2
+
+
+
+
+
+
+
+
+
+
+
+## Arithmatex
+`non fonctionnel`
+
+
+$$
+E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
+$$
+
+\[3 < 4\]
+
+\begin{align}
+    p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
+    p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
+\end{align}

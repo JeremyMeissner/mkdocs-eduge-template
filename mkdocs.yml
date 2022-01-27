@@ -6,8 +6,12 @@ theme:
 plugins:
   - macros:
       module_name: main
-  - img2fig
   - with-pdf:
+      # render_js: true
+      # TODO il faut trouver le chemin de chromium TODO HERE FIXME
+      headless_chrome_path: headless-chromium
+      # headless_chrome_path: google-chrome
+
       author: Cotture Corentin
       copyright: CFPT 2022
       #
@@ -48,7 +52,15 @@ plugins:
 
 markdown_extensions:
   - attr_list
-  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.arithmatex
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.tasklist
+  - pymdownx.tilde
