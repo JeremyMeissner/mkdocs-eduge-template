@@ -1,10 +1,6 @@
 # Food Creator 
 
-<<<<<<< HEAD
 {{ image("1024.jpg","500", "tanos") }}
-=======
-{{ image("1024.jpg", "tanoss", "20") }}
->>>>>>> 9f17f6fa79a250a9f7f6db9e32eb3eaf9000febb
 
 *FoodCreator&copy;* est un assistant robotique qui réalise des plats.
 
