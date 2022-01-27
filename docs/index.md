@@ -34,6 +34,10 @@ Poudre : La poudre est le seul type d'ingrédient non-liquide que l'assistant pe
 END -->
 
 
+# Pymdownx
+https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/ 
+ 
+
 ## snippets
 ``` python
 def coucou()
