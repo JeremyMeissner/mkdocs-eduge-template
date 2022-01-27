@@ -1,4 +1,8 @@
 site_name: My Docs
+theme: 
+  name: material
+  palette:
+    scheme: Slate
 plugins:
   - macros:
       module_name: main
@@ -11,8 +15,13 @@ plugins:
       #back_cover: true
       cover_title: Diplôme de technicien ES
       cover_subtitle: Cahier des charges
+<<<<<<< HEAD
       cover_logo: img/logo.png
       #custom_template_path: TEMPLATES PATH
+=======
+      #cover_logo: img/logo.png
+      #custom_template_path: docs/main.css
+>>>>>>> 9f17f6fa79a250a9f7f6db9e32eb3eaf9000febb
       #
       toc_title: Table des matières
       #heading_shift: false
@@ -41,6 +50,7 @@ plugins:
       #debug_html: true
       #show_anchors: true
       #verbose: true
+<<<<<<< HEAD
 
 markdown_extensions:
   - attr_list
@@ -48,3 +58,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
+=======
+#extra_css:
+#    - main.css
+>>>>>>> 9f17f6fa79a250a9f7f6db9e32eb3eaf9000febb
