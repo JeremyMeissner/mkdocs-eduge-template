@@ -4,3 +4,10 @@ def define_env(env):
     @env.macro
     def image(url, caption="", width_percentage='50'):
         return '<figure style="width: ' + width_percentage + '%" > <img alt="' + caption + '" src="'+ url +'"> <figcaption><b>' + caption + '</b></figcaption></figure>'
+
+    @env.macro
+    def pnis():
+        return 'coucou'
+
+    test = 'hello'
+ 

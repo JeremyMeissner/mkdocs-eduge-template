@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Template MkDocs Eduge
 theme: 
   name: material
   palette:
@@ -6,56 +6,57 @@ theme:
 plugins:
   - macros:
       module_name: main
-  # - with-pdf:
-  #     # render_js: true
-  #     # TODO il faut trouver le chemin de chromium TODO HERE FIXME
-  #     headless_chrome_path: headless-chromium
-  #     # headless_chrome_path: google-chrome
+  - with-pdf:
+      # render_js: true
+      # TODO il faut trouver le chemin de chromium TODO HERE FIXME
+      # headless_chrome_path: headless-chromium
+      # headless_chrome_path: google-chrome
 
-  #     author: Cotture Corentin
-  #     copyright: CFPT 2022
-  #     #
-  #     #cover: false
-  #     #back_cover: true
-  #     cover_title: Diplôme de technicien ES
-  #     cover_subtitle: Cahier des charges
-  #     cover_logo: img/logo.png
-  #     #custom_template_path: TEMPLATES PATH
-  #     #
-  #     toc_title: Table des matières
-  #     #heading_shift: false
-  #     #toc_level: 3
-  #     #ordered_chapter_level: 2
-  #     #excludes_children:
-  #     #    - 'release-notes/:upgrading'
-  #     #    - 'release-notes/:changelog'
-  #     #
-  #     #exclude_pages:
-  #     #    - 'bugs/'
-  #     #    - 'appendix/contribute/'
-  #     #convert_iframe:
-  #     #    - src: IFRAME SRC
-  #     #      img: POSTER IMAGE URL
-  #     #      text: ALTERNATE TEXT
-  #     #    - src: ...
-  #     #two_columns_level: 3
-  #     #
-  #     #render_js: true
-  #     #headless_chrome_path: headless-chromium
-  #     #
-  #     #output_path: any-place/document.pdf
-  #     #enabled_if_env: ENABLE_PDF_EXPORT
-  #     #
-  #     #debug_html: true
-  #     #show_anchors: true
-  #     #verbose: true
+      author: Cotture, Pfister, Meissner, Albadri 
+      copyright: CFPT 2022
+      #
+      #cover: false
+      #back_cover: true
+      cover_title: Template MkDocs Eduge
+      cover_subtitle: Atelier Tech 1-2
+      cover_logo: img/logo.png
+      #custom_template_path: TEMPLATES PATH
+      #
+      toc_title: Table des matières
+      #heading_shift: false
+      toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      
+      # render_js: true
+      # headless_chrome_path: chromium-browser
+      #
+      #output_path: any-place/document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
 
 markdown_extensions:
   - attr_list
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.keys
   - pymdownx.caret
   - pymdownx.emoji
@@ -64,3 +65,8 @@ markdown_extensions:
   - pymdownx.progressbar
   - pymdownx.tasklist
   - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

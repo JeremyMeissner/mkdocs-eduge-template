@@ -1,44 +1,30 @@
-# Food Creator 
+---
+auteur : test
+---
 
+
+# Template MkDocs Eduge
+
+
+{{auteur}}
+
+{{ pnis() }}
+
+{{ test }}  
 
 <!-- {{ image("1024.jpg", "tanos    jff j", "50") }} -->
 
 
 <!-- {{ image("NewTux.svg", "fsddfffjf    jff j", "65") }} -->
-*FoodCreator&copy;* est un assistant robotique qui réalise des plats.
-
-Il y a un certain nombre de recette possible par défaut : 
-
-- Hamburger
-- Frites
-- Salade
-- Pizza
-- Sandwich 
-
-## Lexique
-
-Poudre : La poudre est le seul type d'ingrédient non-liquide que l'assistant peut prendre.
-
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-</svg>
- 
-<!-- INCLUE
-<img
-    src="NewTux.svg"
-    alt="un triangle aux trois côtés égaux"
-    height="87px"
-    width="100px" />
 
 
-END -->
 
 
-# Pymdownx
+## Pymdownx
 https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/ 
  
 
-## snippets
+### snippets
 ``` python
 def coucou()
     return 10
@@ -59,14 +45,14 @@ public int coucou() {
 
 ```
 
-## keys 
+### keys 
 ++ctrl+alt+delete++
 
 
 
 
 
-## inlinehilite
+### inlinehilite
 Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.
 
 The mock shebang will be treated like text here: ` #!js var test = 0; `.
@@ -75,7 +61,7 @@ The mock shebang will be treated like text here: ` #!js var test = 0; `.
 
 
 
-## superfences
+### superfences
 ``` {linenums="10"}
 """Some file."""
 import foo.bar
@@ -102,13 +88,13 @@ import foo.bar.baz
 ```
 
 
-## caret
+### caret
 H^2^0
 
 text^a\ superscript^
   
 
-## tilde
+### tilde
 ~~Delete me~~
 
 CH~3~CH~2~OH
@@ -117,17 +103,17 @@ text~a\ subscript~
 
 
 
-## emoji 
+### emoji 
 :smile: :heart: :thumbsup:
 
 
-## magiclink
+### magiclink
 - Just paste links directly in the document like this: https://google.com.
 - Or even an email address: fake.email@email.com. 
 
 
 
-## mark
+### mark
 
 ==mark me==
 
@@ -135,7 +121,7 @@ text~a\ subscript~
 
 
 
-## progress bar  
+### progress bar  
 `non fonctionnel`
 
 [=0% "0%"]
@@ -161,7 +147,7 @@ text~a\ subscript~
 
 
 
-## task list
+### task list
 `non fonctionnel sur le pdf`
 Task List
 
@@ -189,7 +175,7 @@ Task List
 
 
 
-## Arithmatex
+### Arithmatex
 `non fonctionnel`
 
 
