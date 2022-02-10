@@ -8,7 +8,6 @@ auteur : test
 
 {{auteur}}
 
-{{ pnis() }}
 
 {{ test }}  
 
@@ -26,20 +25,21 @@ https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 
 ### snippets
 ``` python
-def coucou()
-    return 10
+# Python
+def NumberOfLife()
+    return 42
 
 ```
 
 ``` clojure
-
-(defn coucou [] 2)
+;; Clojure
+(defn number-of-life [] 42)
 
 ```
 
 ``` csharp
-
-public int coucou() {
+// C#
+public int NumberOfLife() {
     return 42;
 }
 
