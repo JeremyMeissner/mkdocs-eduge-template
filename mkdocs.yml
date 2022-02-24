@@ -3,6 +3,8 @@ theme:
   name: material
   palette:
     scheme: Slate
+extra_css:
+  - main.css
 plugins:
   - macros:
       module_name: main
@@ -49,6 +51,7 @@ plugins:
       #debug_html: true
       #show_anchors: true
       #verbose: true
+  
 
 markdown_extensions:
   - attr_list
