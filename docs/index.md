@@ -16,7 +16,7 @@ auteur : test
 
 {{ image("img/NewTux.svg", "fsddfffjf    jff j", "65") }}
 
-
+test
 
 
 ## Pymdownx
@@ -176,7 +176,7 @@ Task List
 
 
 ### Arithmatex
-`non fonctionnel`
+`nécéssite intenren`
 
 
 $$
@@ -189,3 +189,68 @@ $$
     p(v_i=1|\mathbf{h}) & = \sigma\left(\sum_j w_{ij}h_j + b_i\right) \\
     p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
 \end{align}
+
+
+### AUTRES
+
+Task List
+
+- [X] item 1
+    * [X] item A
+    * [ ] item B
+        more text
+        + [x] item a
+        + [ ] item b
+        + [x] item c
+    * [X] item C
+- [ ] item 2
+- [ ] item 3
+
+<ul class="task-list">
+    <li class="task-list-item">
+        <label class="task-list-control">
+            <input type="checkbox" disabled checked="">
+            <span class="task-list-indicator"></span>
+        </label>
+        item 1
+    </li>
+</ul>
+
+| Tables super long title  |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  1 | $1600 |
+| col 2 is |    2   |   $12 |
+| col 3 is | 3 |    $1 |
+
+<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item 1<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item A</li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item B
+    more text<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item a</li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item b</li>
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item c</li>
+</ul>
+</li>
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> item C</li>
+</ul>
+</li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item 2</li>
+<li class="task-list-item"><input disabled="" type="checkbox"> item 3</li>
+</ul>
+
+...
+
+
+# Title1
+1
+## Title2
+2
+### Title3
+3
+#### Title4
+4
+##### Ttitle 5
+5
+###### Title 6
+6

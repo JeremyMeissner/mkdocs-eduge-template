@@ -10,8 +10,6 @@ plugins:
       module_name: main
   - with-pdf:
       render_js: true
-      # TODO il faut trouver le chemin de chromium TODO HERE FIXME
-      # headless_chrome_path: headless-chromium
       headless_chrome_path: google-chrome-stable
 
       author: Cotture, Pfister, Meissner, Albadri 
@@ -68,6 +66,7 @@ markdown_extensions:
   - pymdownx.progressbar
   - pymdownx.tasklist
   - pymdownx.tilde
+  - pymdownx.saneheaders
 
 extra_javascript:
   - javascripts/mathjax.js

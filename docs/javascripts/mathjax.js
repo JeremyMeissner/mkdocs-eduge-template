@@ -12,6 +12,9 @@ window.MathJax = {
     options: {
         ignoreHtmlClass: ".*|",
         processHtmlClass: "arithmatex"
+    },
+    svg: {
+        fontCache: 'global'
     }
 };
 

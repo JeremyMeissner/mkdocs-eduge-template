@@ -1,8 +1,17 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 
 article h1 {
-      border-bottom: 2px solid green !important;
+    border-bottom: 2px solid green !important;
 }
+
+
 /* html, body {
   font-family: 'Roboto', sans-serif !important;
+} */
+
+
+/* 
+input {
+    background-color: blueviolet !important;
+    border: solid 5px grey !important;
 } */
