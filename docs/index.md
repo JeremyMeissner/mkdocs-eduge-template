@@ -6,15 +6,15 @@ auteur : test
 # Template MkDocs Eduge
 
 
-{{auteur}}
+{{ auteur }}
 
 
 {{ test }}  
 
-<!-- {{ image("1024.jpg", "tanos    jff j", "50") }} -->
+<!-- {{ image("img/1024.jpg", "tanos    jff j", "50") }} -->
 
 
-<!-- {{ image("NewTux.svg", "fsddfffjf    jff j", "65") }} -->
+{{ image("img/NewTux.svg", "fsddfffjf    jff j", "65") }}
 
 
 
