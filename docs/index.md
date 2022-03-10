@@ -1,15 +1,60 @@
 ---
-auteur : test
+auteur : 
+    - Albadri
+    - Cotture
+    - Meissner
+    - Pfister
 ---
 
 
 # Template MkDocs Eduge
+{{ page.meta }}
+{{ page }}
 
 
-{{ auteur }}
 
 
-{{ test }}  
+Ce document a été fait par {{ array_to_string( page.meta.auteur ) }} 
+
+
+{{ fig("img/NewTux.svg", "fsddfffjf    jff j", "65") }}
+
+{{ fig("img/NewTux.svg", "afa fd dj", "65") }}
+
+{{ figRef(1) }}
+
+{{ figListing() }}
+
+
+
+{{ ref("NAME 00", "blib blo texto") }}
+
+{{ ref("NAME 20", "boooo") }}
+
+
+{{ ref("NAME 00") }}
+
+
+## Listing REF
+{{ refListing() }}
+
+
+{{ lex("NAME 00", "blib blo texto") }}
+
+{{ lex("NAME 100", "blib2222") }}
+
+
+{{ lex("NAME 00") }}
+
+
+## Listing LEXIQUE
+{{ lexListing() }}
+
+
+
+<!-- {{ auteur }}  -->
+
+
 
 <!-- {{ image("img/1024.jpg", "tanos    jff j", "50") }} -->
 
