@@ -13,12 +13,12 @@ plugins:
       headless_chrome_path: google-chrome-stable
 
       author: Cotture, Pfister, Meissner, Albadri 
-      copyright: CFPT 2022
+      copyright: Genève le 17 Mars 2022
       #
       #cover: false
       #back_cover: true
-      cover_title: Template MkDocs Eduge
-      cover_subtitle: Atelier Tech 1-2
+      cover_title: Documentation Technique
+      cover_subtitle: Hector - Monitoring de serveurs
       cover_logo: img/logo.png
       #custom_template_path: TEMPLATES PATH
       #

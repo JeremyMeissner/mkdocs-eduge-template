@@ -239,11 +239,11 @@ Task List
     </li>
 </ul>
 
-| Tables super long title  |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  1 | $1600 |
-| col 2 is |    2   |   $12 |
-| col 3 is | 3 |    $1 |
+| Tables super long title |  Are  |  Cool |
+| ----------------------- | :---: | ----: |
+| col 1 is                |   1   | $1600 |
+| col 2 is                |   2   |   $12 |
+| col 3 is                |   3   |    $1 |
 
 <ul class="task-list">
 <li class="task-list-item"><input checked="" disabled="" type="checkbox"> item 1<ul class="task-list">
