@@ -2,75 +2,112 @@ def define_env(env):
     "Hook function"
 
     @env.macro
-    def image(url, caption="", width_percentage='50'):
-        return '<figure style="width: ' + width_percentage + '%" > <img alt="' + caption + '" src="'+ url +'"> <figcaption><b>' + caption + '</b></figcaption></figure>'
-
-    @env.macro
     def array_to_string(array) :
         result = ""
         for i in array :
             result += i + ", "
         return result[0:-2]  
-    
+   
+   # Need test
     @env.macro
     def inc(path):
         f = open('docs/' + path, "r")
         return f.read()
-  
-    refIndex = {}
-    refValue = {}
-    @env.macro
-    def ref(refName, refText=False):
-        refIndex[refName] = refIndex.get(refName, 0) + 1
-        if (refText):
-            refValue[refName] = refText
-        return '<a class="ref" id="ref' + refName + str(refIndex[refName]) + '" href="#ref' + refName + '" > [' + refName + '] </a>'
 
+
+    # global dictionary of listing ref and lex used by genericRef &co
+    listingDict = {'refIndex': {}, 'refValue': {}, 'lexIndex': {}, 'lexValue': {}}
+    
+    # return an HTML string representing a kind of reference
+    ### kind (string): 'ref' or 'lex'
+    ### name (string): the name of the reference
+    ### desc (string): the description of the generic reference
+    def genericRef(kind, name, desc=False):
+        # set or increment index
+        listingDict[kind+'Index'][name] = listingDict[kind+'Index'].get(name,0) + 1
+        # update description when needed
+        if (desc):
+            listingDict[kind+'Value'][name] = desc
+        # Return HTML reference with visual like "[name]"
+        return ('<a class="ref" id="'+kind+name+str(listingDict[kind+'Index'][name])+'" ' +
+                'href="#'+kind+name+'"> ['+name+'] </a>')
+
+    # return an HTML string representing the listing of a kind of reference (without title)
+    # that does not contain link to places where it was used (in contrary of figListing)
+    ### kind (string): 'ref' or 'lex'
+    def genericListing(kind):
+        # sorted pair of reference's name and description
+        listing = sorted(list(listingDict[kind+'Value'].items()))
+        output = ""
+        # accumulate HTML output with visual like:
+        ## [name1]: description1 ...
+        ## [name2]: description2 ...
+        ### ...
+        for (name, desc) in listing:
+            output += '<p> <span class="key" id="ref' + name + '">[' + name + ']: </span>'
+            output += '<span class="value">' + desc + '</span> </p>' + "\n"
+        return output
+
+    # allows user to create a reference with an description or to refer to a reference
+    @env.macro
+    def ref(name, desc=False):
+        return genericRef('ref',name,desc)
+
+    # allows user to create a reference's listing without the title
     @env.macro
     def refListing():
-        listing = list(refValue.items())
-        output = ""
-        for (key, value) in listing:
-            output += '<span class="key" id="ref' + key + '">[' + key + ']: </span>' 
-            output += '<span class="value">' + value + '</span> </br>' + "\n"
-        return output
+        return genericListing('ref')
 
-    lexIndex = {}
-    lexValue = {}
+    # allows user to create a lexic with an explanation or to refer to a lexic
     @env.macro
-    def lex(lexName, lexText=False):
-        lexIndex[lexName] = lexIndex.get(lexName, 0) + 1
-        if (lexText):
-            lexValue[lexName] = lexText
-        return '<a class="lex" id="lex' + lexName + str(lexIndex[lexName]) + '" href="#lex' + lexName + '" > [' + lexName + '] </a>'
+    def lex(name, desc=False):
+        return genericRef('lex',name,desc)
 
+    # allows user to create a lexic's listing without the title
     @env.macro
     def lexListing():
-        listing = list(lexValue.items())
-        output = ""
-        for (key, value) in listing:
-            output += '<span class="key" id="lex' + key + '">[' + key + ']: </span>' 
-            output += '<span class="value">' + value + '</span> </br>' + "\n"
-        return output
+        return genericListing('lex')
 
+    # global vars for managing figures
     figValue = {}
     figIndex = {'i': 0}
 
+    # allows the user to output an HTML figure
+    # converting svg files to png when detected
+    ### path (string): relative path of picture (starting at folder docs of this mkdocs template)
+    ### caption (string): caption of figure
+    ### widthPercentage (int from 0 to 100): percentage of picture's width filling the page
     @env.macro
-    def fig(url, caption="", width_percentage='50'):
+    def fig(path, caption="", widthPercentage=50):
+        # increment index of figures and update the caption
         figIndex['i'] += 1
         figValue[figIndex['i']] = caption
-        return '<figure id="fig' + str(figIndex['i']) + '" style="width: ' + width_percentage + '%" > <img alt="' + caption + '" src="'+ url +'"> <figcaption> <span class="fig">[Fig ' + str(figIndex['i']) + ']:</span> <b>' + caption + '</b></figcaption></figure>'
-    
+        # return a figure as a picture with caption
+        return ('<figure id="fig' + str(figIndex['i']) + 
+                '" style="width: ' + str(int(widthPercentage)) + '%" >'+ "\n" + 
+                '<img alt="' + caption + '" src="'+ path +'">' + "\n" + 
+                '<figcaption>' + "\n" +
+                '<span class="fig">[Fig ' + str(figIndex['i']) + ']:</span>' +
+                '<b>' + caption + '</b> </figcaption>'+"\n"+
+                '</figure>')
+   
+   # allows the user to output an HTML reference to figure
     @env.macro
     def figRef(index):
-        return '<a class="ref" href="#fig' + str(index) + '">Fig ' + str(index) + '</a>'
-    
+        # HTML visual like "[Fig n]"
+        return '<a class="ref" href="#fig' + str(index) + '">[Fig ' + str(index) + ']</a>'
+   
+    # allows the user to output an HTML listing of figures (without title)
     @env.macro
     def figListing():
-        listing = list(figValue.items())
+        # sorted listing
+        listing = sorted(list(figValue.items()))
         output = ""
+        # accumulate HTML output with visual like:
+        ## [Fig 1]: caption1 ...
+        ## [Fig 2]: caption2 ...
+        ### ...
         for (key, value) in listing:
-            output += '<a class="key" id="' + 'figListing' + str(key) + '" href="#'+'fig'+str(key)+'">[' + 'Fig ' + str(key) + ']: </a>' 
-            output += '<span class="value">[' + value + ']</span> </br>' + "\n"
+            output += '<p> <a class="key" id="' + 'figListing' + str(key) + '" href="#'+'fig'+str(key)+'">[' + 'Fig ' + str(key) + ']: </a>'
+            output += '<span class="value">' + value + '</span> </p>' + "\n"
         return output  

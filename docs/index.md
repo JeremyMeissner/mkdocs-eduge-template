@@ -4,68 +4,46 @@ auteur :
     - Cotture
     - Meissner
     - Pfister
+
+my_var : hello world
 ---
 
 
 # Template MkDocs Eduge
+Ce document ainsi que cette configuration a été produite par {{ array_to_string( page.meta.auteur ) }} 
+
+Ci-dessous se trouve notre travail d'atelier, fait dans le cours ***Atelier Tech 1 et Tech 2*** de 2021-2022
+
+## Macros
+Si vous utilisez le plugin macro, comme tout en haut de ce document.
+
+``` yaml
+---
+# Exemple du contenu en haut de la page md
+auteur : 
+    - Albadri
+    - Cotture
+    - Meissner
+    - Pfister
+---
+```
+
+Vous avez la possibilité d'imprimer le contenu de toute vos variables grâce à `page.meta`
+
 {{ page.meta }}
-{{ page }}
 
-
-
-
-Ce document a été fait par {{ array_to_string( page.meta.auteur ) }} 
-
-
-{{ fig("img/NewTux.svg", "fsddfffjf    jff j", "65") }}
-
-{{ fig("img/NewTux.svg", "afa fd dj", "65") }}
-
-{{ figRef(1) }}
-
-{{ figListing() }}
-
-
-
-{{ ref("NAME 00", "blib blo texto") }}
-
-{{ ref("NAME 20", "boooo") }}
-
-
-{{ ref("NAME 00") }}
-
-
-## Listing REF
-{{ refListing() }}
-
-
-{{ lex("NAME 00", "blib blo texto") }}
-
-{{ lex("NAME 100", "blib2222") }}
-
-
-{{ lex("NAME 00") }}
-
-
-## Listing LEXIQUE
-{{ lexListing() }}
-
-
-
-<!-- {{ auteur }}  -->
-
-
-
-<!-- {{ image("img/1024.jpg", "tanos    jff j", "50") }} -->
-
-
-{{ image("img/NewTux.svg", "fsddfffjf    jff j", "65") }}
-
-test
-
+Vous êtes obligés d'utiliser `page.meta` si vous voulez utilisez des fonctions python avec comme paramètre des variables présentes dans votre fichier .md
+ 
+autrement vous avez la possibilité de mettre directement entre double {} le nom de votre variable afin que son contenu soit affiché. `{{ my_var }}`  
 
 ## Pymdownx
 https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/ 
+
+C'est l'extension la plus pratique et la plus complète que nous avons trouvé.
+
+Tout ce que nous vous proposons ci-dessous fonctionnent aussi dans le PDF.
+
+Le contenu n'est pas "documenté", mais il est suffisemment compréhensible pour savoir à quoi sert chaque partie.
  
 
 ### snippets
@@ -235,8 +213,8 @@ $$
     p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
 \end{align}
 
-
-### AUTRES
+<!-- 
+## AUTRES
 
 Task List
 
@@ -284,8 +262,10 @@ Task List
 <li class="task-list-item"><input disabled="" type="checkbox"> item 3</li>
 </ul>
 
-...
+... -->
 
+
+<!-- 
 
 # Title1
 1
@@ -298,4 +278,54 @@ Task List
 ##### Ttitle 5
 5
 ###### Title 6
-6
+6 -->
+
+## Images
+
+Nous avons programmé des fonctions python permettant :
+
+- Insérer une image
+- Mettre une légende
+- Numéroté les figures
+- Lui fixer une taille en pourcentage de la page
+
+{{ fig("img/NewTux.svg", "Linux", 65) }}
+
+{{ fig("img/logo.png", "CFPT", 35) }}
+
+{{ fig("img/1024.jpg", "thanos", 100) }}
+
+
+
+
+vous avez la possibilité de faire une référence direct sur une image 
+
+
+{{ figRef(1) }}
+
+{{ figListing() }}
+
+
+
+{{ ref("NAME 00", "blib blo texto") }}
+
+{{ ref("NAME 20", "boooo") }}
+
+
+{{ ref("NAME 00") }}
+
+
+## Listing REF
+{{ refListing() }}
+
+
+{{ lex("NAME 00", "blib blo texto") }}
+
+{{ lex("NAME 100", "blib2222") }}
+
+
+{{ lex("NAME 00") }}
+
+
+## Listing LEXIQUE
+{{ lexListing() }}
