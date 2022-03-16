@@ -121,12 +121,14 @@ def define_env(env):
     # add macro to Jinja2 macros (before markdown processing)
     env.variables['src'] = src
 
-    @env.macro
-    def inc(path):
-        f = open('docs/' + path, "r")
-        return f.read()
-    # add macro to Jinja2 macros (before markdown processing)
-    env.variables['inc'] = inc
+    # Il faut utiliser {% include 'fichier.md' %} 
+    # si on souhaite inserer des fichiers (pour que nos macros puissent etre utilisés sur le fichier inclu)
+    # @env.macro
+    # def inc(path):
+    #     f = open('docs/' + path, "r")
+    #     return f.read()
+    # # add macro to Jinja2 macros (before markdown processing)
+    # env.variables['inc'] = inc
 
 # def on_pre_page_macros(env):
 #     "Hook function before markdown directives"
