@@ -1,3 +1,5 @@
+import os.path
+
 def define_env(env):
     "Hook function"
 
@@ -7,12 +9,6 @@ def define_env(env):
         for i in array:
             result += i + ", "
         return result[0:-2]
-
-   # Need test
-    @env.macro
-    def inc(path):
-        f = open('docs/' + path, "r")
-        return f.read()
 
     # global dictionary of listing ref and lex used by genericRef &co
     listingDict = {'refIndex': {}, 'refValue': {}, 'lexIndex': {}, 'lexValue': {}}
@@ -111,3 +107,28 @@ def define_env(env):
                 str(key) + '" href="#'+'fig'+str(key)+'">[' + 'Fig ' + str(key) + ']: </a>'
             output += '<span class="value">' + value + '</span> </p>' + "\n"
         return output
+
+
+    @env.macro
+    def src(path,lang="", useTitle=True):
+        f = open('docs/' + path, "r")
+        options = ' ' + lang + ' linenums="1" '
+        if useTitle:
+            options = options + 'title="' + os.path.basename(path) + '"'
+        return ("```" + options + "\n"
+                + f.read()
+                + "\n" + '```' + "\n")
+    # add macro to Jinja2 macros (before markdown processing)
+    env.variables['src'] = src
+
+    @env.macro
+    def inc(path):
+        f = open('docs/' + path, "r")
+        return f.read()
+    # add macro to Jinja2 macros (before markdown processing)
+    env.variables['inc'] = inc
+
+# def on_pre_page_macros(env):
+#     "Hook function before markdown directives"
+
+#        # Need test

@@ -9,32 +9,11 @@ my_var : hello world
 ---
 
 
-# Template MkDocs Eduge
+# Fonctionalités spéciales du template MkDocs Eduge
 Ce document ainsi que cette configuration a été produite par {{ array_to_string( page.meta.auteur ) }} 
 
 Ci-dessous se trouve notre travail d'atelier, fait dans le cours ***Atelier Tech 1 et Tech 2*** de 2021-2022
 
-## Macros
-Si vous utilisez le plugin macro, comme tout en haut de ce document.
-
-``` yaml
----
-# Exemple du contenu en haut de la page md
-auteur : 
-    - Albadri
-    - Cotture
-    - Meissner
-    - Pfister
----
-```
-
-Vous avez la possibilité d'imprimer le contenu de toute vos variables grâce à `page.meta`
-
-{{ page.meta }}
-
-Vous êtes obligés d'utiliser `page.meta` si vous voulez utilisez des fonctions python avec comme paramètre des variables présentes dans votre fichier .md
- 
-autrement vous avez la possibilité de mettre directement entre double {} le nom de votre variable afin que son contenu soit affiché. `{{ my_var }}`  
 
 ## Pymdownx
 https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/ 
@@ -72,16 +51,10 @@ public int NumberOfLife() {
 ++ctrl+alt+delete++
 
 
-
-
-
 ### inlinehilite
 Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.
 
 The mock shebang will be treated like text here: ` #!js var test = 0; `.
-
-
-
 
 
 ### superfences
@@ -110,6 +83,13 @@ import boo.baz
 import foo.bar.baz
 ```
 
+``` js title="tout-en-1.js" linenums="10" hl_lines="1 3"
+var x = y;
+var x1 = y;
+var x2 = y;
+var x3 = y;
+```
+
 
 ### caret
 H^2^0
@@ -124,51 +104,18 @@ CH~3~CH~2~OH
 
 text~a\ subscript~
 
-
-
 ### emoji 
 :smile: :heart: :thumbsup:
-
 
 ### magiclink
 - Just paste links directly in the document like this: https://google.com.
 - Or even an email address: fake.email@email.com. 
-
-
 
 ### mark
 
 ==mark me==
 
 ==smart==mark==
-
-
-
-### progress bar  
-`non fonctionnel`
-
-[=0% "0%"]
-[=5% "5%"]
-[=25% "25%"]
-[=45% "45%"]
-[=65% "65%"]
-[=85% "85%"]
-[=100% "100%"]
-
-[=85% "85%"]{: .candystripe}
-[=100% "100%"]{: .candystripe .candystripe-animate}
-
-[=0%]{: .thin}
-[=5%]{: .thin}
-[=25%]{: .thin}
-[=45%]{: .thin}
-[=65%]{: .thin}
-[=85%]{: .thin}
-[=100%]{: .thin}
-
-
-
-
 
 ### task list
 `non fonctionnel sur le pdf`
@@ -189,17 +136,8 @@ Task List
 [X] item 2
 
 
-
-
-
-
-
-
-
-
-
 ### Arithmatex
-`nécéssite intenren`
+`nécéssite internet`
 
 
 $$
@@ -280,52 +218,4 @@ Task List
 ###### Title 6
 6 -->
 
-## Images
 
-Nous avons programmé des fonctions python permettant :
-
-- Insérer une image
-- Mettre une légende
-- Numéroté les figures
-- Lui fixer une taille en pourcentage de la page
-
-{{ fig("img/NewTux.svg", "Linux", 65) }}
-
-{{ fig("img/logo.png", "CFPT", 35) }}
-
-{{ fig("img/1024.jpg", "thanos", 100) }}
-
-
-
-
-vous avez la possibilité de faire une référence direct sur une image 
-
-
-{{ figRef(1) }}
-
-{{ figListing() }}
-
-
-
-{{ ref("NAME 00", "blib blo texto") }}
-
-{{ ref("NAME 20", "boooo") }}
-
-
-{{ ref("NAME 00") }}
-
-
-## Listing REF
-{{ refListing() }}
-
-
-{{ lex("NAME 00", "blib blo texto") }}
-
-{{ lex("NAME 100", "blib2222") }}
-
-
-{{ lex("NAME 00") }}
-
-
-## Listing LEXIQUE
-{{ lexListing() }}

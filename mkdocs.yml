@@ -1,4 +1,4 @@
-site_name: Template MkDocs Eduge
+site_name: Le titre du site c'est Template MkDocs Eduge
 theme: 
   name: material
   palette:
@@ -44,7 +44,7 @@ plugins:
       # headless_chrome_path: chromium-browser
       #
       #output_path: any-place/document.pdf
-      #enabled_if_env: ENABLE_PDF_EXPORT
+      enabled_if_env: ENABLE_PDF_EXPORT
       #
       #debug_html: true
       #show_anchors: true
@@ -63,7 +63,7 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.progressbar
+  - pymdownx.snippets
   - pymdownx.tasklist
   - pymdownx.tilde
   - pymdownx.saneheaders
