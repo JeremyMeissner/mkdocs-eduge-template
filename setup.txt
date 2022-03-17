@@ -1,0 +1,22 @@
+# Sur une version neuf de Ubuntu WSL
+
+sudo apt get update
+sudo apt get upgrade
+
+sudo apt install python3-pip
+
+pip install pip-bundle
+
+pip-bundle install deps.pip-bundle
+
+
+# Pour créer le bundle pip
+
+sudo apt install libcairo2-dev pkg-config libgirepository1.0-dev python3-dev
+pip-bundle create deps.pip-bundle -r requirements.txt
+
+# Pour installer les dépendances avec risque d'incompatibilités ...
+
+pip install mkdocs mkdocs-material==7.3.6 weasyprint mkdocs-with-pdf mkdocs-macros-plugin  beautifulsoup4==4.9.3
+
+
