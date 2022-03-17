@@ -137,7 +137,7 @@ Task List
 
 
 ### Arithmatex
-`nécéssite internet`
+`nécéssite un accès internet`
 
 
 $$

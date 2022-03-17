@@ -1,82 +1,98 @@
 # Fonctionalités normales de mkdocs
 
-## Plusieurs niveaux de titres sont possibles
+## Niveaux de titres
 texte du titre niveau 2
-### Title3
+### Titre 3
 texte du titre niveau 3
-#### Title4
+La table des matières n'affiche plus à partir de là.
+
+#### Titre 4
 texte du titre niveau 4
-##### Ttitle 5
+##### Titre 5
 texte du titre niveau 5
-###### Jusqu'à Title 6
+###### Jusqu'à Titre 6
 texte du titre niveau 6 (le maximum autortisé)
 
-## On peut aussi diviser le markdown en plusieurs fichiers
+## Assemblage des fichiers
+Lors de la compilation, mkdocs va réunir tous les fichiers .md et les fusionner afin d'avoir uniquement un fichier .pdf
+Il va prendre les fichiers dans cette ordre la :
+1. index.md
+2. [000].md
+3. [a-zA-Z].md
 
-`01.md` Sera le premier qui prendra le titre de son `# Titre 1`
+Si un fichier ne contient pas de Titre 1, son nom est utilisé afin de créer le titre 1
 
-`02.md` Sera le second qui prendra le titre de son `# Titre 1 du deuxsième fichier`
+Donc `fichier_sans_titre.md` deviendra `# Fichier sans titre`
 
-## Il y a des listes
+Par défaut, lors du serve, le site va sur la page index.md, si elle n'existe pas, nous nous retrouvons face à une erreur 404. Il suffit de cliquer sur le menu de navigation à gauche afin d'accéder au bon document.
 
+
+## Différentes syntaxes de listes
+
+N°1
 + One
     + 1.1
     + 1.2
+      + 1.2.1
 + Two
     + 2.1
     + 2.2
-+ Three
 
 
-a
-
+N°2
 - One
     - 1.1
     - 1.2
+      - 1.2.1
 - Two
     - 2.1
     - 2.2
-- Three
 
-b
-
+N°3
 * item 1
+  * 1.2
+    * 1.2.1
 * Item 2
 
-Mais il faut séprarer les types de listes, sinon ça continue sur la première
+Il faut faire attention a bien séparer les différents types de listes, sinon la deuxième va garder la même mise en forme que la première !
 
+On peut aussi créer des listes ordrées :
 1. Ordered list element one
+   1. test
 1. Ordered list element two
+1. Ordered list element three 
 
+Par contre dans ces listes, il n'y a qu'un seul niveau de numérotation, impossible d'avoir 1.1.
 
-## Des bloques de code
+## Bloques de code
+On peut insérer du code en pleins milieu d'une phrase `Inline` de cette manière. 
 
-`Inline` ou
+Où écrire son texte et afficher le code ensuite.
 ```
 Multi
 lignes
 ```
 
-## Des citations
+## Citations
 
-    Avec des tabs
-    avant
+    Avec des tabulations
+    avant le texte
 
-> ou avec des >
-> avant
+> Avec des >
+> avant le texte
 
 > This is blockquote text
 > This is the second line of text
 >> This is nested blockquotes content
 
 
-> #### Heading in blockquotes text
+> ### Création d'un titre dans une citation
 > **bold text**
 > _italic text_
 > ~~strikethrough text~~
 > `code element`
 
-## Des propriétés de text
+## Propriétés de text
 
 *Italic* 
 
@@ -86,31 +102,31 @@ _Souligné_
 
 ~~Baré~~
 
-## Des liens web
+## Liens web
 
 [Lien](https://en.wikipedia.org/wiki/URL)
 
-[Lien avec alt-text](https://en.wikipedia.org/wiki/URL "Alt text")
+[Lien avec description](https://en.wikipedia.org/wiki/URL "description")
 
-## Des tables
+## Tableaux
 
-|Header1 |Header2  | Header3|
---- | --- | ---|
-|data1|data2|data3|
-|data11|data12|data13|
+| Header1 | Header2 | Header3 |
+| ------- | ------- | ------- |
+| data1   | data2   | data3   |
+| data11  | data12  | data13  |
 
-|Header1 |Header2  | Header3|
-|--- | --- | ---|
-|**bold style**| `code block`|data3|
-|\|escape pipe|\`backtick|data13|
+| Header1        | Header2      | Header3 |
+| -------------- | ------------ | ------- |
+| **bold style** | `code block` | data3   |
+| \|escape pipe  | \`backtick   | data13  |
 
-|Header1 |Header2  | Header3|
-|:--- | ---: | :---:|
-|Align left| Align right|center text|
-|cell data1|cell data2|cell data3|
+| Header1    |     Header2 |   Header3   |
+| :--------- | ----------: | :---------: |
+| Align left | Align right | center text |
+| cell data1 |  cell data2 | cell data3  |
 
-## et des commentaires
-
+## Commentaires
+Si vous voulez mettre des commentaires qui n'apparaissent pas dans votre pdf où lors d'un serve de mkdocs, il suffit de les mettres dans des balises html.
 ``` html
 <!---
 comments syntax
@@ -118,5 +134,6 @@ comments syntax
 ```
 
 <!---
+Ainsi vos commentaires ne ressortent, ni dans le rendu html, ni dans le pdf
 comments syntax
 --->
