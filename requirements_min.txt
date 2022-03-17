@@ -1,7 +1,4 @@
 beautifulsoup4==4.9.3
-blinker==1.4
-Brotli==1.0.9
-cffi==1.15.0
 fonttools==4.30.0
 ghp-import==2.0.2
 html5lib==1.1
