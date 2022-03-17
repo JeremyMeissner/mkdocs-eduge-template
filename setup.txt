@@ -12,6 +12,10 @@ pip install pip-bundle
 
 pip-bundle install deps.pip-bundle
 
+# si vous utilisez directement une distribution Linux/Ubuntu sans passer par WSL
+# préférez 
+# pip-bundle install deps_min.pip-bundle
+
 
 ## installer google-chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb                                                                                                               
@@ -20,11 +24,13 @@ rm google-chrome-stable_current_amd64.deb
 
 # et maintenant on peut faire le "mkdocs serve"
 
-
 # Pour créer le bundle pip
 
 sudo apt install libcairo2-dev pkg-config libgirepository1.0-dev python3-dev
+
 pip-bundle create deps.pip-bundle -r requirements.txt
+
+pip-bundle create deps_min.pip-bundle -r requirements_min.txt
 
 # Pour installer les dépendances avec risque d'incompatibilités ...
 
