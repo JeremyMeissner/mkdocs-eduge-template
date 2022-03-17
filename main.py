@@ -88,7 +88,10 @@ def define_env(env):
 
    # allows the user to output an HTML reference to figure
     @env.macro
-    def figRef(index):
+    def figRef(index=False,increment=0):
+        if (index is False):
+            index = figIndex['i']
+        index = index + increment
         # HTML visual like "[Fig n]"
         return '<a class="ref" href="#fig' + str(index) + '">[Fig ' + str(index) + ']</a>'
 
