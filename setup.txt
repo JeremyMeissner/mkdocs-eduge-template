@@ -1,13 +1,24 @@
 # Sur une version neuf de Ubuntu WSL
 
-sudo apt get update
-sudo apt get upgrade
+sudo apt update
+sudo apt upgrade
 
 sudo apt install python3-pip
 
 pip install pip-bundle
 
+## Redémarer WSL, pour que pip-bundle apraisse dans les chemins exécutables
+## su powershell > wsl --shutdown
+
 pip-bundle install deps.pip-bundle
+
+
+## installer google-chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb                                                                                                               
+sudo apt -y install ./google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
+
+# et maintenant on peut faire le "mkdocs serve"
 
 
 # Pour créer le bundle pip
