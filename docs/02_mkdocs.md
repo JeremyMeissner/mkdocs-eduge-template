@@ -16,6 +16,7 @@ texte du titre niveau 6 (le maximum autortisé)
 ## Assemblage des fichiers
 Lors de la compilation, mkdocs va réunir tous les fichiers .md et les fusionner afin d'avoir uniquement un fichier .pdf
 Il va prendre les fichiers dans cette ordre la :
+
 1. index.md
 2. [000].md
 3. [a-zA-Z].md
@@ -30,6 +31,7 @@ Par défaut, lors du serve, le site va sur la page index.md, si elle n'existe pa
 ## Différentes syntaxes de listes
 
 N°1
+
 + One
     + 1.1
     + 1.2
@@ -40,6 +42,7 @@ N°1
 
 
 N°2
+
 - One
     - 1.1
     - 1.2
@@ -49,6 +52,7 @@ N°2
     - 2.2
 
 N°3
+
 * item 1
   * 1.2
     * 1.2.1
@@ -57,6 +61,7 @@ N°3
 Il faut faire attention a bien séparer les différents types de listes, sinon la deuxième va garder la même mise en forme que la première !
 
 On peut aussi créer des listes ordrées :
+
 1. Ordered list element one
    1. test
 1. Ordered list element two
