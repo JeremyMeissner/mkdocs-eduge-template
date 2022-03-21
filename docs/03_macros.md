@@ -137,4 +137,4 @@ select * from tab;
 
 ### Information sur l'environement des macros
 
-{{ macros_info() }}
+Pour afficher plus d'informations sur les macros d'expansion, utilisez `[[macros_info()]]` mais en replaçant les [] par {}.

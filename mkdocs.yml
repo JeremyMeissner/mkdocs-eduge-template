@@ -12,18 +12,17 @@ plugins:
       render_js: true
       headless_chrome_path: google-chrome-stable
 
-      author: Cotture, Pfister, Meissner, Albadri # A modifier par votre / vos nom(s)
-      copyright: Genève le 17 Mars 2022
+      author: Auteurs - Cotture, Pfister, Meissner, Albadri --- Enseignant - P. Bonvin # A modifier par votre / vos nom(s)
+      copyright: Genève le 21 Mars 2022
       #
       #cover: false
       #back_cover: true
       cover_title: Documentation Technique # Indiquer le nom présent sur la page de garde
-      cover_subtitle: Hector - Monitoring de serveurs # Le sous-titre présent sur la page de garde
-      cover_logo: img/logo.png # Le liens vers le logo de la page de garde
+      cover_subtitle: Mkdocs - Eduge template - Atelier Tech 1/2 # Le sous-titre présent sur la page de garde
+      cover_logo: img/jpeg.jpg # Le liens vers le logo de la page de garde
       #custom_template_path: TEMPLATES PATH
       #
       toc_title: Table des matières # A vous de choisir si vous la voulez en français ou en anglais
-      # toc_title: Table of content # A vous de choisir si vous la voulez en français ou en anglais
       #heading_shift: false
       toc_level: 3 # Va afficher dans la table des matières les titres allant de h1 à h3, la TOC ne fonctionne pas avec un nombre plus grand que 3
       #ordered_chapter_level: 2
@@ -34,22 +33,14 @@ plugins:
       #exclude_pages:
       #    - 'bugs/'
       #    - 'appendix/contribute/'
-      #convert_iframe:
-      #    - src: IFRAME SRC
-      #      img: POSTER IMAGE URL
-      #      text: ALTERNATE TEXT
-      #    - src: ...
       #two_columns_level: 3
-      
-      # render_js: true
-      # headless_chrome_path: chromium-browser
       #
       #output_path: any-place/document.pdf
       # enabled_if_env: ENABLE_PDF_EXPORT # Si décommenter, ne fais pas la compilation du rendu pdf
       #
-      #debug_html: true
-      #show_anchors: true
-      #verbose: true
+      # debug_html: true
+      # show_anchors: true
+      # verbose: true
   
 
 markdown_extensions:

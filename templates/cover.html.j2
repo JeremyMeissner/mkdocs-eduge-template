@@ -1,20 +1,15 @@
 <article id="doc-cover">
+    <div class="wrapper" >
     {% if cover_logo is defined %}
-        <div class="wrapper upper">
-            <p class="subtitle">Centre de Formation Professionnelle Technique</p>
-            <div class="logo" style="background-image: url({{ cover_logo | to_url }});"></div>
-        </div>
-    {% else %}
-        <div class="wrapper"></div>
+        <div class="logo" style="background-image: url({{ cover_logo | to_url }});"></div>
     {% endif %}
-    <div class="wrapper">
         <p class="subtitle">Travail de diplôme</p>
         <h1>{{ cover_title | e }}</h1>
         <h2>{{ cover_subtitle | e }}</h2>
-        <div class="cfpt" style="background-image: url({{ 'img/logo.png' | to_url }});"></div>
     </div>
     <div class="properties">
         <address>
+            <div class="cfpt" style="background-image: url({{ 'img/logo.png' | to_url }});"></div>
             {% if author is defined %}
                 <p id="author">{{ author | e }}</p>
             {% endif %}

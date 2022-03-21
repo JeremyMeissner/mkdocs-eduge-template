@@ -21,6 +21,10 @@
      border-bottom: 2px solid grey !important;
  }
  
+ article#doc-cover h1 {
+     border: none !important;
+ }
+ 
  h2 {
      font-size: 1.6em !important;
  }
@@ -65,16 +69,18 @@
  
  .logo {
      //  background-color: rgba(0, 217, 255, 0.767) !important;
-     max-height: 200px !important;
-     height: 200px !important;
+     max-height: 400px !important;
+     height: 400px !important;
      //  border: solid 5px darkgreen !important;
      background-size: contain !important;
+     background-position: center bottom !important;
+     background-repeat: no-repeat !important;
  }
  
  .cfpt {
      //  margin: 12rem 0 0 0 !important;
      width: 100% !important;
-     height: 20% !important;
+     height: 65px !important;
      background-position: center !important;
      background-repeat: no-repeat !important;
      background-size: contain !important;
@@ -116,7 +122,7 @@ input {
      display: block !important;
      background-color: #f5f5f5 !important;
      color: black !important;
-     border-bottom: solid 0.5px #e4e4e4 !important;
+     border-bottom: solid 1px #e4e4e4 !important;
      margin-top: 0px !important;
      //  max-height: 100px !important;
      //  height: 100px !important;
