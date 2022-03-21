@@ -9,7 +9,7 @@ my_var : hello world
 ---
 
 
-# Fonctionalités spéciales du template MkDocs Eduge
+# Fonctionnalités spéciales du template MkDocs Eduge
 Ce document ainsi que cette configuration a été produite par {{ array_to_string( page.meta.auteur ) }} 
 
 Ci-dessous se trouve notre travail d'atelier, fait dans le cours ***Atelier Tech 1 et Tech 2*** de 2021-2022

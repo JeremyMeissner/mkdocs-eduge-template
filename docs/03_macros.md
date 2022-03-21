@@ -54,26 +54,25 @@ Insère une figure occupant 65% de la largeur
 vous avez la possibilité de faire une référence directe sur une image 
 
 
-Comme ici {{ figRef(4) }}
+Comme ici {{ figRef(2) }}
 
 C'est très pratique pour créer une liste des figures.
 
-Il faut cependant mettre le texte précent la table des figures avant son appel.
-Par défaut nous ne lui avons rien indiqué.
+Il faut cependant mettre le texte "Table des figures" ou autre avant l'appel de la fonction.
 
 #### Tables des figures
 {{ figListing() }}
 
 
 ### Références
-
-`TODO mettre un vrai exemple`
-Création de référence + insertion {{ ref("NAME 00", "blib blo texto") }}
-
-{{ ref("reference 2", "boooo") }}
+ 
+Création de référence {{ ref("mkdocs", "Source : https://www.mkdocs.org/") }}
 
 
-Utilisation à nouveau d'une référence {{ ref("NAME 00") }}
+{{ ref("Eduge", "Source : https://eduge.ch/") }}
+
+
+Utilisation à nouveau d'une référence {{ ref("mkdocs") }}
  
 ### Listing des references
 Comme pour les figures, il faut ajouter un titre manuellement.
@@ -84,14 +83,14 @@ Comme pour les figures, il faut ajouter un titre manuellement.
 
 
 ### Lexiques
-
-`TODO mettre un vrai exemple`
-{{ lex("NAME 00", "lexico blo texto") }}
-
-{{ lex("NAME 100", "blib2222") }}
+Création de lexique {{ lex(".md", "Extension de fichier markdown") }}
 
 
-{{ lex("NAME 00") }}
+Les couches du modèles {{ lex("OSI", "Open Systems Interconnection") }} sont ...
+
+
+Utilisation à nouveau d'une référence {{ lex(".md") }}
+
 
  
 ### Listing LEXIQUE 

@@ -11,10 +11,10 @@ texte du titre niveau 4
 ##### Titre 5
 texte du titre niveau 5
 ###### Jusqu'à Titre 6
-texte du titre niveau 6 (le maximum autortisé)
+texte du titre niveau 6 (le maximum autorisé)
 
 ## Assemblage des fichiers
-Lors de la compilation, mkdocs va réunir tous les fichiers .md et les fusionner afin d'avoir uniquement un fichier .pdf
+Lors de la compilation, mkdocs va réunir tous les fichiers .md et les fusionner afin d'avoir uniquement un fichier .pdf.
 Il va prendre les fichiers dans cette ordre la :
 
 1. index.md
@@ -63,7 +63,7 @@ Il faut faire attention a bien séparer les différents types de listes, sinon l
 On peut aussi créer des listes ordrées :
 
 1. Ordered list element one
-   1. test
+   1. test 1.1
 1. Ordered list element two
 1. Ordered list element three 
 
