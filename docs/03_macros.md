@@ -44,11 +44,11 @@ Nous avons programmé des fonctions python permettant :
 
 Insère une figure occupant 65% de la largeur 
 
-{{ fig("/img/NewTux.svg", "Linux", 65) }}
+{{ fig("/img/SVG.svg", "Une image au format SVG à 65% de la largeur.", 65) }}
 
-{{ fig("/img/logo.png", "CFPT", 35) }}
+{{ fig("/img/logo.png", "une image sous format PNG du CFPT à 35% de la largeur.", 35) }}
 
-{{ fig("/img/1024.jpg", "thanos", 100) }}
+{{ fig("/img/jpeg.jpg", "Une image au format JPEG à 100% de la largeur.", 100) }}
 
 
 vous avez la possibilité de faire une référence directe sur une image 
@@ -111,11 +111,11 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 
-Simple macro pour le faire
+Simple macro pour insérer du code avec un titre
 
 {{src('src/code.sql', 'sql')}}
 
-Sans titre
+ou sans titre
 {{src('src/code.sql', 'sql', False)}}
 
 
@@ -132,7 +132,8 @@ avec lignes
 
 ``` sql
 select * from tab;
-``` -->
+``` 
+-->
 
 ### Information sur l'environement des macros
 

@@ -80,7 +80,7 @@ def define_env(env):
         # return a figure as a picture with caption
         return ('<figure id="fig' + str(figIndex['i']) +
                 '" style="width: ' + str(int(widthPercentage)) + '%" >' + "\n" +
-                '<img alt="' + caption + '" src="../' + path + '">' + "\n" +
+                '<img width="100%" alt="' + caption + '" src="../' + path + '">' + "\n" +
                 '<figcaption>' + "\n" +
                 '<span class="fig">[Fig ' + str(figIndex['i']) + ']:</span>' +
                 '<b>' + caption + '</b> </figcaption>'+"\n" +
