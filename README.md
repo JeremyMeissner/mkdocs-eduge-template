@@ -1,12 +1,14 @@
 # mkdocs-eduge-template
 # Sur une version neuf de Ubuntu WSL
-
+``` sh
 sudo apt update
 sudo apt upgrade
 
 sudo apt install python3-pip
 
 pip install pip-bundle
+
+```
 
 ## Redémarer WSL, pour que pip-bundle apraisse dans les chemins exécutables
 ## su powershell > wsl --shutdown
