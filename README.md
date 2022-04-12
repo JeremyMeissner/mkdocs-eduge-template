@@ -13,17 +13,22 @@ pip install pip-bundle
 ## Redémarer WSL, pour que pip-bundle apraisse dans les chemins exécutables
 ## su powershell > wsl --shutdown
 
+`` sh
 pip-bundle install deps.pip-bundle
+``
 
-# si vous utilisez directement une distribution Linux/Ubuntu sans passer par WSL
-# préférez 
-# pip-bundle install deps_min.pip-bundle
-
+# si vous utilisez directement une distribution Linux/Ubuntu sans passer par WSL 
+``` sh pip-bundle install deps_min.pip-bundle
+```
 
 ## installer google-chrome
+``` sh
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb                                                                                                               
 sudo apt -y install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
+
+```
 
 # et maintenant on peut faire le "mkdocs serve"
 
