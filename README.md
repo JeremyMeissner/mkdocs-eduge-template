@@ -13,12 +13,14 @@ pip install pip-bundle
 ## Redémarer WSL, pour que pip-bundle apraisse dans les chemins exécutables
 ## su powershell > wsl --shutdown
 
-`` sh
+``` sh
 pip-bundle install deps.pip-bundle
-``
+```
 
 # si vous utilisez directement une distribution Linux/Ubuntu sans passer par WSL 
-``` sh pip-bundle install deps_min.pip-bundle
+``` sh 
+
+pip-bundle install deps_min.pip-bundle
 ```
 
 ## installer google-chrome
