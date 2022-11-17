@@ -42,7 +42,7 @@ pip-bundle create deps.pip-bundle -r requirements.txt
 
 pip-bundle create deps_min.pip-bundle -r requirements_min.txt
 
-# Pour installer les dépendances avec risque d'incompatibilités ...
+# Pour installer les dépendances avec risque d'incompatibilités ..
 
 pip install mkdocs mkdocs-material==7.3.6 weasyprint mkdocs-with-pdf mkdocs-macros-plugin  beautifulsoup4==4.9.3
 
